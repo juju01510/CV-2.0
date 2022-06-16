@@ -1,0 +1,198 @@
+* {
+	/* reset */
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+}
+html {
+	/* background fixe et centré*/
+	background: url(./Images/BG-A\ link\ to\ the\ past.jpg) repeat fixed 50% 50%;
+	background-size: cover;
+}
+body {
+	/* Permet de placer le footer en bas de page */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	/* height en vh essentielle pour fixer le footer en bas */
+	height: 100vh;
+	/* font */
+	font-size: 16px;
+	font-family: Old Standard TT;
+	font-weight:900;
+	color: rgb(0,0,0);
+}
+.title {
+	display: flex;
+	justify-content: space-around;
+	/* align-items: center; */
+	border: solid 2px rgb(0,0,0);
+	padding: 1em;
+	font-size: 2em;
+	color: rgb(197,0,1);
+	font-family: EB Garamond;
+	text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+	text-transform: uppercase;
+	background-color: rgb(165,160,92);
+}
+.title img {
+	width: 2em;
+	height: 2em;
+}
+.triforce:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+.play-stop p {
+	visibility: hidden;
+	position: absolute;
+}
+.play-stop img:hover + p {
+	visibility: visible;
+	font-size: 0.4em;
+}
+
+/* Navigation */
+
+.nav-list {
+	padding: 0.5em 0;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	background-color: rgba(165,160,92,0.6);
+	border: solid 2px rgb(0,0,0);
+	border-top: none;
+	border-bottom-left-radius: 20px;
+}
+.nav-item {
+	margin-right: 2em;
+	text-transform: uppercase;
+}
+.nav-item a {
+	color: rgb(0,0,0);
+	font-size: 1.2em;
+}
+.nav-item:first-child {
+	margin-right: auto;
+	margin-left: 2em;
+	font-size: 1.8em;
+}
+.nav-item:last-child {
+	margin-left: 4em;
+}
+.nav-item a:hover {
+	color: rgba(0,0,0,0.5);
+}
+.nav-item a:active {
+	color: rgb(0,0,0);
+}
+
+/* Main */
+.bloc-main {
+	text-align: center;
+	color: rgb(1,0,0);
+	text-transform: uppercase;
+}
+.bloc-main h2 {
+	font-size: 3em;
+}
+
+/* Footer */
+footer {
+	border: solid 2px rgb(0,0,0)
+}
+.bloc-footer {
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-evenly;
+	padding: 0.5em 0 0.5em 0;
+	background-color: rgba(165,160,92,0.6);
+	border-bottom: solid 2px rgb(0,0,0);
+}
+.bloc-footer-reseaux-mobile {
+	display: none;
+}
+.bloc-footer h3 {
+	font-size: 1.1em;
+	font-family: EB Garamond;
+	color:rgb(197,0,1);
+	text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+	margin-bottom: 0.4em;
+	text-transform: uppercase;
+}
+.bloc-footer a {
+	color: rgb(0,0,0);
+}
+.bloc-footer a:hover {
+	color: rgba(0,0,0,0.5);
+}
+.bloc-footer a:active {
+	color: rgb(0,0,0);
+}
+.bloc-footer-reseaux img {
+	width: 1em;
+	margin-right: 0.5em;
+}
+.bottom-bloc-footer {
+	text-align: center;
+	background-color: rgb(165,160,92);
+	padding-top: 0.2em;
+}
+
+@media (max-width: 900px) {
+	/* Bloc titre */
+	.title {
+		font-size: 1.5em;
+	}
+	.triforce {
+		width: 1.5em;
+		height: 1.5em;
+	}
+	/* Bloc Nav */
+	.nav-list {
+		flex-direction: column;
+	}
+	.nav-item {
+		margin: auto;
+	}
+	.nav-item:first-child {
+		margin: 0 0 0.25em 0;
+		font-size: 1.8em;
+	}
+	.nav-item:last-child {
+		margin: auto;
+	}
+}
+@media (max-width: 700px) {
+	.title {
+		justify-content: center;
+	}
+	.triforce {
+		display: none;
+	}
+}
+@media (max-width: 550px) {
+	body {
+		font-size: 13px;
+	}
+	.title {
+		font-size: 1.07em;
+	}
+	main{
+		font-size: 1em;
+	}
+	.bloc-footer-reseaux {
+		display: none;
+	}
+	.bloc-footer-reseaux-mobile {
+		display: flex;
+		justify-content: center;
+		background-color: rgba(46, 40, 40, 0.6);
+	}
+	.bloc-footer-reseaux-mobile img {
+		width: 1.5em;
+		margin: 0.3em 0.5em 0 0.5em;
+	}
+}
